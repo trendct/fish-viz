@@ -1,0 +1,231 @@
+/* @import 'https://fonts.googleapis.com/css?family=Lato|Merriweather'; */
+@import 'https://fonts.googleapis.com/css?family=Lato:400,900|Merriweather';
+
+body {
+    color: #555;
+    font-family: 'Lato', sans-serif;
+}
+
+.expander_button {
+    margin-right: 4px;
+}
+
+.climate_exposure_group .explanation_area:hover {
+    cursor: pointer;
+    color: yellow;
+}
+
+.climate_exposure_group.collapsed .fish_box,
+.climate_exposure_group.collapsed .explanation_area p
+{
+    display:none;
+}
+
+.climate_exposure_group.expanded .fish_box,
+.climate_exposure_group.expanded .explanation_area p
+{
+    display:inline-block;
+}
+
+div.climate_exposure_group{
+    border-radius: 4px 4px 0px 0px;
+    clear:both;
+    border-bottom: 2px solid gray;
+    text-align:left;
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+div.climate_exposure_group[data-exposure-level='Low']{
+    /* background-color: darkgray; */
+    background-color: goldenrod;
+    
+}
+
+div.climate_exposure_group[data-exposure-level='Moderate']{
+    /* background-color: skyblue;; */
+    /* background-color: cornflowerblue; */
+    background-color: MediumAquamarine;/* lightgreen; */
+}
+
+div.climate_exposure_group[data-exposure-level='High']{
+    background-color: orchid;
+}
+
+div.climate_exposure_group[data-exposure-level='Very High']{
+    background-color: cornflowerblue;
+}
+
+.fish_box[data-bio-sensitivity-level='Low'] {
+    background-color: rgba(255,255,255,0.25);
+}
+.fish_box[data-bio-sensitivity-level='Moderate'] {
+    background-color: rgba(255,255,255,0.5);
+}
+.fish_box[data-bio-sensitivity-level='High'] {
+    background-color: rgba(255,255,255,0.75);
+}
+.fish_box[data-bio-sensitivity-level='Very High'] {
+    background-color: rgba(255,255,255,0.9);
+}
+
+.sourceline, .byline {
+    color: #999;
+    font-size: 0.9em;
+}
+
+.sourceline {
+    float:left;
+    text-transform: uppercase;
+    font-style: italic;
+    padding-left: 10px;
+}
+
+.byline {
+    padding-right: 10px;
+    float: right;
+}
+
+.clear_float {
+    clear:both;
+}
+
+.fish_box{
+    box-sizing:border-box;
+    border-radius: 4px;
+    text-align:center;
+    padding: 3px;
+    margin: 3px;
+    float: left;
+    border: 2px solid white;
+}
+
+.fish_box:hover {
+    border: 2px solid yellow;
+    cursor: pointer;
+}
+
+/* .fish_box:hover img{ */
+.fish_box.hovering img{
+    /* border: 2px solid white;  /\* #555; *\/ */
+    max-width: 150px;
+    /* width: 100px; */
+    /* max-height: 100px; */
+}
+
+.bio-sensitivity-text
+/* .fish_name */
+ {
+    display:none;
+}
+
+.fish_box.hovering .bio-sensitivity-text
+/* .fish_box.hovering .fish_name */
+ {
+    display: inline;
+}
+
+.explanation_area h1,
+.explanation_area h2,
+.explanation_area h3,
+.explanation_area h4,
+.explanation_area h5,
+.explanation_area h6,
+.explanation_area h7
+{
+    font-weight: 900;
+}
+
+
+.fish_box img{
+    max-width: 65px;
+    max-height: 100px;
+
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+    
+}
+
+.explanation_area {
+    color: white;
+}
+
+.explanation_area p {
+    font-family: 'Merriweather', serif;
+}
+
+.bio-sensitivity-box{
+    height: 16px;
+    width: 16px;
+    border-radius: 10px;
+    background-color: lightgray;
+    float: right;
+    /* border: 1px solid white; */
+    border: 1px solid #999;
+}
+
+.top_copy {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+}
+
+.top_copy h3{
+    margin-top: 0px;
+    
+}
+
+.legend {
+    /* border: 1px solid lightgray; */
+    /* border-radius: 2px; */
+    /* background-color: #ddd; */
+    /* padding: 3px; */
+    /* margin-left: 10px; */
+    /* display:inline-block; */
+		       
+    /* display: inline;; */
+    /* float:right; */
+}
+
+.legend_item{
+    float: left;
+}
+
+.legend .bio-sensitivity-box{
+    border: 1px solid #999;
+    margin-right: 3px;
+    float: left;
+}
+
+.legend_label {
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-right: 3px;
+    /* margin-left: 3px; */
+    float:left
+}
+
+[data-bio-sensitivity-level='Low'] .bio-sensitivity-box,
+[data-bio-sensitivity-level='Low'].bio-sensitivity-box
+{
+    background-color: green;
+}
+[data-bio-sensitivity-level='Moderate'] .bio-sensitivity-box,
+[data-bio-sensitivity-level='Moderate'].bio-sensitivity-box
+{
+    background-color: yellow;
+}
+[data-bio-sensitivity-level='High'] .bio-sensitivity-box,
+[data-bio-sensitivity-level='High'].bio-sensitivity-box
+{
+    background-color: orange;
+}
+[data-bio-sensitivity-level='Very High'] .bio-sensitivity-box,
+[data-bio-sensitivity-level='Very High'].bio-sensitivity-box
+{
+    background-color: red;
+}
